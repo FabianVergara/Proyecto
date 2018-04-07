@@ -59,11 +59,51 @@ namespace Biblioteca.Entidades
         }
 
         public bool EliminarContrato() {
-            Biblioteca.DALC.Contrato Con;
-            Con = Entidades.Contrato.First()
+            try
+            {
+
+                Biblioteca.DALC.Contrato Con;
+                Con = Entidades.Contrato.First(a => a.Numero.Equals(NumeroContrato));
+                Con.Vigente = this.Vigente;//Modificar el estado a no vigente
+                //Falta poner fecha fin al contrato
+                Entidades.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return false;
+            }
         }
 
         public bool ActualizarContrato() {
+            try
+            {
+                Biblioteca.DALC.Contrato Con;
+                
+                Con = Entidades.Contrato.First(a => a.Numero.Equals(NumeroContrato));
+
+                Con.Numero = this.NumeroContrato;
+                Con.FechaCreacion = this.Creacion;
+                Con.RutCliente = this.Titular;
+                Con.CodigoPlan = this.PlanAsociado;
+                Con.FechaInicioVigencia = this.InicioVigencia;
+                Con.FechaFinVigencia = this.FinVigencia;
+                Con.Vigente = this.Vigente;
+                Con.DeclaracionSalud = this.ConDeclaracionSalud;
+                Con.PrimaAnual = this.PrimaAnual;
+                Con.PrimaMensual = this.PrimaMensual;
+                Con.Observaciones = this.Observaciones;
+
+                
+                Entidades.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return false;
+            }
 
         }
 
