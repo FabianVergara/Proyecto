@@ -21,9 +21,11 @@ namespace Biblioteca.Entidades
         public Double PrimaAnual { get; set; }
         public Double PrimaMensual { get; set; }
         public String Observaciones { get; set; }
+        Biblioteca.DALC.BeLifeEntities Entidades;
 
         public Contrato()
         {
+            Entidades = new BeLifeEntities();
 
         }
 }
