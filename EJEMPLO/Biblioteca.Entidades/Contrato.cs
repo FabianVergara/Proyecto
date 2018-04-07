@@ -52,14 +52,15 @@ namespace Biblioteca.Entidades
             }
             catch (Exception ex)
             {
-
+                Logger.Mensaje(ex.Message);
                 return false;
             }
              
         }
 
         public bool EliminarContrato() {
-
+            Biblioteca.DALC.Contrato Con;
+            Con = Entidades.Contrato.First()
         }
 
         public bool ActualizarContrato() {
