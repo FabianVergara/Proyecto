@@ -20,3 +20,6 @@ C:\Users\Sony\Source\Repos\Proyecto\EJEMPLO\Vista\obj\Debug\Vista.pdb
 C:\Users\iruy_\Source\Repos\Proyecto2\EJEMPLO\Vista\bin\Debug\Vista.exe.config
 C:\Users\iruy_\Source\Repos\Proyecto2\EJEMPLO\Vista\obj\Debug\Vista.exe
 C:\Users\iruy_\Source\Repos\Proyecto2\EJEMPLO\Vista\obj\Debug\Vista.pdb
+C:\Users\Joselin\Source\Repos\Proyecto\EJEMPLO\Vista\bin\Debug\Vista.exe.config
+C:\Users\Joselin\Source\Repos\Proyecto\EJEMPLO\Vista\obj\Debug\Vista.exe
+C:\Users\Joselin\Source\Repos\Proyecto\EJEMPLO\Vista\obj\Debug\Vista.pdb
