@@ -16,8 +16,8 @@ namespace Biblioteca.Entidades
         //poliza?? la realizo aca en el diagrama de clases sale pero en el modelo no aparece
         public DateTime InicioVigencia { get; set; }
         public DateTime FinVigencia { get; set; }
-        public Char Vigente { get; set; }//dice que ews bit deberia guardarlo como char
-        public Char ConDeclaracionSalud { get; set; }//dice que ews bit deberia guardarlo como char
+        public Char Vigente { get; set; }//dice que es bit deberia guardarlo como char
+        public Char ConDeclaracionSalud { get; set; }//dice que es bit deberia guardarlo como char
         public Double PrimaAnual { get; set; }
         public Double PrimaMensual { get; set; }
         public String Observaciones { get; set; }
@@ -26,6 +26,18 @@ namespace Biblioteca.Entidades
         public Contrato()
         {
             Entidades = new BeLifeEntities();
+
+        }
+        //METODOS CRUD
+        public bool GrabarContrato() {
+
+        }
+
+        public bool EliminarContrato() {
+
+        }
+
+        public bool ActualizarContrato() {
 
         }
 }
