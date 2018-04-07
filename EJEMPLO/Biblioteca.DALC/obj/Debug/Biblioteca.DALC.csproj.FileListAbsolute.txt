@@ -1,0 +1,8 @@
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\bin\Debug\Biblioteca.DALC.dll.config
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\bin\Debug\Biblioteca.DALC.dll
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\bin\Debug\Biblioteca.DALC.pdb
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\bin\Debug\EntityFramework.dll
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\bin\Debug\EntityFramework.xml
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\obj\Debug\Biblioteca.DALC.csprojResolveAssemblyReference.cache
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\obj\Debug\Biblioteca.DALC.dll
+c:\users\duoc\documents\visual studio 2015\Projects\EJEMPLO\Biblioteca.DALC\obj\Debug\Biblioteca.DALC.pdb
