@@ -17,3 +17,6 @@ E:\(dey)DESARROLLO SOFTWARE ESCRITORIO Y GESTION\03_04\EJEMPLO\Vista\obj\Debug\w
 C:\Users\Sony\Source\Repos\Proyecto\EJEMPLO\Vista\bin\Debug\Vista.exe.config
 C:\Users\Sony\Source\Repos\Proyecto\EJEMPLO\Vista\obj\Debug\Vista.exe
 C:\Users\Sony\Source\Repos\Proyecto\EJEMPLO\Vista\obj\Debug\Vista.pdb
+C:\Users\iruy_\Source\Repos\Proyecto2\EJEMPLO\Vista\bin\Debug\Vista.exe.config
+C:\Users\iruy_\Source\Repos\Proyecto2\EJEMPLO\Vista\obj\Debug\Vista.exe
+C:\Users\iruy_\Source\Repos\Proyecto2\EJEMPLO\Vista\obj\Debug\Vista.pdb
