@@ -8,6 +8,8 @@ namespace Biblioteca.Entidades
 {
     public class Contrato
     {
-        public int MyProperty { get; set; }
+        public int NumeroContrato { get; set; }
+        public DateTime Creacion { get; set; }
+
     }
 }
