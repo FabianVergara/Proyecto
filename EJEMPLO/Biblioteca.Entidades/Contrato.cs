@@ -10,6 +10,21 @@ namespace Biblioteca.Entidades
     {
         public int NumeroContrato { get; set; }
         public DateTime Creacion { get; set; }
+        public DateTime Termino { get; set; }
+        public String Titular { get; set; }
+        public String PlanAsociado { get; set; }
+        //poliza?? la realizo aca en el diagrama de clases sale pero en el modelo no aparece
+        public DateTime InicioVigencia { get; set; }
+        public DateTime FinVigencia { get; set; }
+        public Char Vigente { get; set; }//dice que ews bit deberia guardarlo como char
+        public Char ConDeclaracionSalud { get; set; }//dice que ews bit deberia guardarlo como char
+        public Double PrimaAnual { get; set; }
+        public Double PrimaMensual { get; set; }
+        public String Observaciones { get; set; }
 
-    }
+        public Contrato()
+        {
+
+        }
+}
 }
