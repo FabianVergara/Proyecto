@@ -107,9 +107,67 @@ namespace Biblioteca.Entidades
 
         }
 
-        public bool BuscarContrato() { }
+        public bool BuscarContrato()
+        {
+            try
+            {
+                Biblioteca.DALC.Contrato Con;
+                Con = Entidades.Contrato.First(a => a.Numero.Equals(NumeroContrato));
+                this.NumeroContrato = Con.Numero;
+                this.Creacion = Con.FechaCreacion;
+                this.Titular = Con.RutCliente;
+                this.PlanAsociado = Con.CodigoPlan;
+                this.InicioVigencia = Con.FechaInicioVigencia;
+                this.FinVigencia = Con.FechaFinVigencia;
+                this.Vigente = Con.Vigente;
+                this.ConDeclaracionSalud = Con.DeclaracionSalud;
+                this.PrimaAnual = Con.PrimaAnual;
+                this.PrimaMensual = Con.PrimaMensual;
+                this.Observaciones = Con.Observaciones;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+		        return false;
+	        }
 
-        public List<Contrato> ListarTodoContrato() { }
+            
+              }
+
+        public List<Contrato> ListarTodoContrato() {
+            try
+            {
+                List<Contrato> ListadoContrato = new List<Contrato>();
+                var ContratoModelo = Entidades.Contrato.ToList();
+
+                foreach (var item in ContratoModelo)
+                {
+                    Contrato Con = new Contrato();
+
+                    Con.NumeroContrato = item.Numero;
+                    Con.Creacion = item.FechaCreacion;
+                    Con.Titular = item.RutCliente;
+                    Con.PlanAsociado = item.CodigoPlan;
+                    Con.InicioVigencia = item.FechaInicioVigencia;
+                    Con.FinVigencia = item.FechaFinVigencia;
+                    Con.Vigente = this.Vigente;
+                    Con.ConDeclaracionSalud = item.DeclaracionSalud;
+                    Con.PrimaAnual = item.PrimaAnual;
+                    Con.PrimaMensual = item.PrimaMensual;
+                    Con.Observaciones = item.Observaciones;
+                    ListadoContrato.Add(Con);
+                }
+
+                return ListadoContrato;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return null;
+            }
+
+        }
 
 
     }
