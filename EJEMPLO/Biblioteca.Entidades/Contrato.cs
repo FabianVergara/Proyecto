@@ -8,7 +8,7 @@ namespace Biblioteca.Entidades
 {
     public class Contrato
     {
-        public String NumeroContrato { get; set; }
+        public int NumeroContrato { get; set; }
         public DateTime Creacion { get; set; }
         public DateTime Termino { get; set; }
         public String Titular { get; set; }
@@ -16,8 +16,8 @@ namespace Biblioteca.Entidades
         //poliza?? la realizo aca en el diagrama de clases sale pero en el modelo no aparece
         public DateTime InicioVigencia { get; set; }
         public DateTime FinVigencia { get; set; }
-        public Boolean Vigente { get; set; }
-        public Boolean ConDeclaracionSalud { get; set; }
+        public Char Vigente { get; set; }//dice que es bit deberia guardarlo como char
+        public Char ConDeclaracionSalud { get; set; }//dice que es bit deberia guardarlo como char
         public Double PrimaAnual { get; set; }
         public Double PrimaMensual { get; set; }
         public String Observaciones { get; set; }
@@ -30,87 +30,15 @@ namespace Biblioteca.Entidades
         }
         //METODOS CRUD
         public bool GrabarContrato() {
-            try
-            {
-                Biblioteca.DALC.Contrato Con;
-                Con = new DALC.Contrato();
-                Con.Numero = this.NumeroContrato;
-                Con.FechaCreacion = this.Creacion;
-                Con.RutCliente = this.Titular;
-                Con.CodigoPlan = this.PlanAsociado;
-                Con.FechaInicioVigencia = this.InicioVigencia;
-                Con.FechaFinVigencia = this.FinVigencia;
-                Con.Vigente = this.Vigente;
-                Con.DeclaracionSalud = this.ConDeclaracionSalud;
-                Con.PrimaAnual = this.PrimaAnual;
-                Con.PrimaMensual = this.PrimaMensual;
-                Con.Observaciones = this.Observaciones;
 
-                Entidades.Contrato.Add(Con);
-                Entidades.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Logger.Mensaje(ex.Message);
-                return false;
-            }
-             
         }
 
         public bool EliminarContrato() {
-            try
-            {
 
-                Biblioteca.DALC.Contrato Con;
-                Con = Entidades.Contrato.First(a => a.Numero.Equals(NumeroContrato));
-                Con.Vigente = this.Vigente;//Modificar el estado a no vigente
-                //Falta poner fecha fin al contrato
-                Entidades.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Logger.Mensaje(ex.Message);
-                return false;
-            }
         }
 
         public bool ActualizarContrato() {
-            try
-            {
-                Biblioteca.DALC.Contrato Con;
-                
-                Con = Entidades.Contrato.First(a => a.Numero.Equals(NumeroContrato));
-
-                Con.Numero = this.NumeroContrato;
-                Con.FechaCreacion = this.Creacion;
-                Con.RutCliente = this.Titular;
-                Con.CodigoPlan = this.PlanAsociado;
-                Con.FechaInicioVigencia = this.InicioVigencia;
-                Con.FechaFinVigencia = this.FinVigencia;
-                Con.Vigente = this.Vigente;
-                Con.DeclaracionSalud = this.ConDeclaracionSalud;
-                Con.PrimaAnual = this.PrimaAnual;
-                Con.PrimaMensual = this.PrimaMensual;
-                Con.Observaciones = this.Observaciones;
-
-                
-                Entidades.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Logger.Mensaje(ex.Message);
-                return false;
-            }
 
         }
-
-     //   public bool BuscarContrato() { }
-
-     //   public List<Contrato> ListarTodoContrato() { }
-
-
-    }
+}
 }
