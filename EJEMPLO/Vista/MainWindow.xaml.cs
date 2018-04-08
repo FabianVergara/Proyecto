@@ -64,5 +64,11 @@ namespace Vista
                 e.Cancel = true;//cancelo el evento lo cambio
             }
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            ListarRut lr = new ListarRut();
+            lr.ShowDialog();
+        }
     }
 }

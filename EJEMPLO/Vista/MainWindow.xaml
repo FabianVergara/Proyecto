@@ -12,6 +12,7 @@
                 <MenuItem Header="Ingreso Cliente" Click="MenuItem_Click"/>
                 <MenuItem Header="Administrador"/>
                 <MenuItem Header="Listado">
+                    <MenuItem Header="Por Rut" Click="MenuItem_Click_2"/>
                     <MenuItem Header="Por Sexo"/>
                     <MenuItem Header="Por Estado Civil"/>
                     <MenuItem Header="Todo"/>
