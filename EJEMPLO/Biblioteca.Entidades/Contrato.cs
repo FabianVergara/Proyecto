@@ -33,7 +33,7 @@ namespace Biblioteca.Entidades
             try
             {
                 Biblioteca.DALC.Contrato Con;
-                Con = new DALC.Contrato;
+                Con = new DALC.Contrato();
                 Con.Numero = this.NumeroContrato;
                 Con.FechaCreacion = this.Creacion;
                 Con.RutCliente = this.Titular;
@@ -107,9 +107,9 @@ namespace Biblioteca.Entidades
 
         }
 
-        public bool BuscarContrato() { }
+     //   public bool BuscarContrato() { }
 
-        public List<Contrato> ListarTodoContrato() { }
+     //   public List<Contrato> ListarTodoContrato() { }
 
 
     }
