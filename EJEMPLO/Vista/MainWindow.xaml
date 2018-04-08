@@ -19,8 +19,9 @@
             </MenuItem>
             <MenuItem Header="Salir">
                 <MenuItem Header="Salir Sistema" Click="MenuItem_Click_1"/>
-            </MenuItem>    
+            </MenuItem>
         </Menu>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="169" Margin="73,96,0,0" VerticalAlignment="Top" Width="373" Source="imagenes/Logo BeLife.png"/>
 
     </Grid>
 </Window>

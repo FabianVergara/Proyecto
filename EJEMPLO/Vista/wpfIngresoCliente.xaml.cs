@@ -34,6 +34,7 @@ namespace Vista
         {
             try
             {
+              
                 Cliente cli = new Cliente();
                 cli.RutCliente = txt_rut.Text;
                 cli.Nombres = txt_nombres.Text;
@@ -55,6 +56,13 @@ namespace Vista
         private void txt_rut_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Volver_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow ventana = new Vista.MainWindow();
+            ventana.Show();
+            this.Close();
         }
     }
 }

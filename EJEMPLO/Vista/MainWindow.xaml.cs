@@ -44,7 +44,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("Se arrepintio pillin");
+                MessageBox.Show("¿seguro que desea abandonar?");
             }
 
         }
@@ -60,7 +60,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("Se arrepintio pillin");
+                MessageBox.Show("¿esta seguro?");
                 e.Cancel = true;//cancelo el evento lo cambio
             }
         }
