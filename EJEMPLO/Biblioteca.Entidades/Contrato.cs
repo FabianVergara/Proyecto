@@ -135,7 +135,7 @@ namespace Biblioteca.Entidades
             
               }
 
-        public List<Contrato> ListarTodoContrato() {
+        public List<Contrato> ListarTodo() {
             try
             {
                 List<Contrato> ListadoContrato = new List<Contrato>();
@@ -166,9 +166,122 @@ namespace Biblioteca.Entidades
                 Logger.Mensaje(ex.Message);
                 return null;
             }
+        }
+             public List<Contrato> ListarporNroContrato(String NumeroContrato)
+        {
+            try
+            {
+                List<Contrato> ListadoContrato = new List<Contrato>();
+                var ContratoModelo = from c in Entidades.Contrato
+                                     where c.Numero == NumeroContrato
+                                     select c;
+
+                foreach (var item in ContratoModelo)
+                {
+                    Contrato Con = new Contrato();
+
+                    Con.NumeroContrato = item.Numero;
+                    Con.Creacion = item.FechaCreacion;
+                    Con.Titular = item.RutCliente;
+                    Con.PlanAsociado = item.CodigoPlan;
+                    Con.InicioVigencia = item.FechaInicioVigencia;
+                    Con.FinVigencia = item.FechaFinVigencia;
+                    Con.Vigente = this.Vigente;
+                    Con.ConDeclaracionSalud = item.DeclaracionSalud;
+                    Con.PrimaAnual = item.PrimaAnual;
+                    Con.PrimaMensual = item.PrimaMensual;
+                    Con.Observaciones = item.Observaciones;
+                    ListadoContrato.Add(Con);
+                }
+
+                return ListadoContrato;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return null;
+            }
+
+        }
+        public List<Contrato> ListarporRut(String Rut)
+        {
+            try
+            {
+                List<Contrato> ListadoContrato = new List<Contrato>();
+                var ContratoModelo = from r in Entidades.Contrato
+                                     where r.RutCliente == Rut
+                                     select r;
+
+                foreach (var item in ContratoModelo)
+                {
+                    Contrato Con = new Contrato();
+
+                    Con.NumeroContrato = item.Numero;
+                    Con.Creacion = item.FechaCreacion;
+                    Con.Titular = item.RutCliente;
+                    Con.PlanAsociado = item.CodigoPlan;
+                    Con.InicioVigencia = item.FechaInicioVigencia;
+                    Con.FinVigencia = item.FechaFinVigencia;
+                    Con.Vigente = this.Vigente;
+                    Con.ConDeclaracionSalud = item.DeclaracionSalud;
+                    Con.PrimaAnual = item.PrimaAnual;
+                    Con.PrimaMensual = item.PrimaMensual;
+                    Con.Observaciones = item.Observaciones;
+                    ListadoContrato.Add(Con);
+                }
+
+                return ListadoContrato;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return null;
+            }
+
+        }
+        //FILTRAR POR NUMERO DE POLIZA ???
+        public List<Contrato> ListarporNroPoliza(String Poliza)
+        {
+            try
+            {
+                //hay que corregir lo de poliza para que esto funcione
+                //List<Contrato> ListadoContrato = new List<Contrato>();
+                //var ContratoModelo = from c in Entidades.Contrato
+                //                     where c.Numero == NumeroContrato
+                //                     select c;
+
+                foreach (var item in ContratoModelo)
+                {
+                    Contrato Con = new Contrato();
+
+                    Con.NumeroContrato = item.Numero;
+                    Con.Creacion = item.FechaCreacion;
+                    Con.Titular = item.RutCliente;
+                    Con.PlanAsociado = item.CodigoPlan;
+                    Con.InicioVigencia = item.FechaInicioVigencia;
+                    Con.FinVigencia = item.FechaFinVigencia;
+                    Con.Vigente = this.Vigente;
+                    Con.ConDeclaracionSalud = item.DeclaracionSalud;
+                    Con.PrimaAnual = item.PrimaAnual;
+                    Con.PrimaMensual = item.PrimaMensual;
+                    Con.Observaciones = item.Observaciones;
+                    ListadoContrato.Add(Con);
+                }
+
+                return ListadoContrato;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return null;
+            }
 
         }
 
-
     }
+
+
+
+
+}
 }
