@@ -206,6 +206,12 @@ namespace Vista {
             return;
             case 11:
             this.button = ((System.Windows.Controls.Button)(target));
+            
+            #line 22 "..\..\wpfIngresoCliente.xaml"
+            this.button.Click += new System.Windows.RoutedEventHandler(this.button_Click);
+            
+            #line default
+            #line hidden
             return;
             case 12:
             this.button1 = ((System.Windows.Controls.Button)(target));

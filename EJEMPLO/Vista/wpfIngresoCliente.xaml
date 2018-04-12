@@ -19,7 +19,7 @@
                 <DatePicker HorizontalAlignment="Left" Margin="138,77,0,0" VerticalAlignment="Top"/>
                 <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="90,145,0,0" VerticalAlignment="Top" Width="120"/>
                 <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="90,110,0,0" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="7,186,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="7,186,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
                 <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="90,186,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="181,186,0,0" VerticalAlignment="Top" Width="75"/>
             </Grid>
